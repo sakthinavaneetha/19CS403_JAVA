@@ -30,10 +30,13 @@ RegisterNumber: 212222040138
 
 ```
 import java.util.StringTokenizer;  
-public class Demo{  
- public static void main(String args[]){  
+public class Demo
+{  
+ public static void main(String args[])
+{  
    StringTokenizer st = new StringTokenizer("My name is Java Programming"," ");  
-     while (st.hasMoreTokens()) {  
+     while (st.hasMoreTokens())
+{  
          System.out.println(st.nextToken());  
      }  
    }  
