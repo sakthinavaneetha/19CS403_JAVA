@@ -1,22 +1,22 @@
-# Ex.No:8(B) IO-FILE READER/WRITER
+# Ex.No:8(C)             FILTER READER
 ## AIM:
-To create a java program to append a NUMBER in a file “testout.txt” using Writer.
+ To create a java Program to read the content from the file by using Filter Reader 
 
 
 ## ALGORITHM :
-1.	It creates a file testout.txt, writes "Welcome to Java File Concept -Reader" to it, and displays this initial content.
-2.	It reopens the file in append mode and adds "1234567890" at the end of the existing content.
-3.	It reads the file's content (Welcome to Java File Concept -Reader1234567890) and displays it.
-4.	The file is deleted using file.delete().
-5.	It tries to read the file again, but this throws an exception since the file no longer exists.
-
-
+1.  Start the Program
+2.  Define CustomFilterReader1, extending FilterReader, and override the read() method to replace spaces with $ while reading.
+2.	In main(), create a FileOutputStream and a FilterOutputStream to write "India is my country" to a file named javaFile123.txt.
+3.	Write the string to the file using filter.write(), then close the FilterOutputStream.
+4.	Create a FileReader to read from javaFile123.txt, and wrap it with CustomFilterReader1.
+5.	Read and print each character, where spaces are replaced with $, until the end of the file.
+6.	Close CustomFilterReader1 and FileReader to free resources
 
 
 ## PROGRAM:
  ```
 /*
-Program to implement a IO File Reader/Writer using Java
+Program to implement a Filter Reader using Java
 Developed by: Sakthi Navaneetha
 RegisterNumber: 212222040138
 */
@@ -25,27 +25,20 @@ RegisterNumber: 212222040138
 ## Sourcecode.java:
 
 ```
-import java.io.*;  
-import java.util.*;
-public class JavaCharArrayReaderReadExample4 
+class CustomFilterReader1 extends FilterReader
 {  
-    public static void main(String[] args)
+    CustomFilterReader1(Reader in)
+    {  
+        super(in);  
+    }  
+    public int read() throws IOException
     {
-        String s ="WELCOME ALL.";
-        char[] array = new char[12];
-        try
-        {
-            Reader input = new StringReader(s);
-            input.read(array);
-            System.out.println("Data read from the string:");
-            System.out.println(array);
-            input.close();
-        }
-        catch(Exception e)
-        {
-            e.getStackTrace();
-        }
-    }
+        int x = super.read();  
+        if ((char) x == ' ')  
+            return ((int) '*');  
+        else  
+            return x;  
+    }  
 }
 ```
 
@@ -54,10 +47,18 @@ public class JavaCharArrayReaderReadExample4
 
 
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/a2aa98fe-b59b-4e88-8431-e1862293a60b)
 
-![Image](https://github.com/user-attachments/assets/80185aa2-f9e4-45ea-934b-5750f7ecb126)
+
+
 ## RESULT:
-Thus, the java program to append a NUMBER in a file “testout.txt” using Writer.was executed and verified successfully
+Thus the java Program to read the content from the file by using Filter Reader  was executed and verified successfully.
+
+
+
+
+
+
 
 
 
