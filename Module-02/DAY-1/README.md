@@ -17,21 +17,49 @@ To create a java program for calculate cube of a number using static method.
 
 
 
+
 ## PROGRAM:
  ```
 /*
 Program to implement a Static method using Java
-Developed by: 
-RegisterNumber:  
+Developed by: Sakthi Navaneetha M.R
+RegisterNumber: 212222040138
 */
 ```
 
 ## Sourcecode.java:
 
+```
+import java.util.Scanner;
+
+public class CubeCalculator {
+
+    public static int calculateCube(int number) {
+        return number * number * number;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int inputNumber = scanner.nextInt();
+        int cube = calculateCube(inputNumber);
+        System.out.println("Cube is: " + cube);
+
+        scanner.close();
+    }
+}
+
+```
+
+
+## OUTPUT:
+
+
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/4756def7-b7e2-42ec-acf4-fde55b23fcf0" />
 
 
 
-
+## RESULT:
+Thus the java program for calculate cube of a number using static method has been executed successfully.
 
 
 ## OUTPUT:
