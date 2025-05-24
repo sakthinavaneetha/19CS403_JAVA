@@ -28,7 +28,7 @@ RegisterNumber: 212222040138
 
 ## Sourcecode.java:
 
-
+```
 import java.util.StringTokenizer;  
 public class Demo{  
  public static void main(String args[]){  
@@ -37,7 +37,8 @@ public class Demo{
          System.out.println(st.nextToken());  
      }  
    }  
-}  
+}
+```
 ## OUTPUT:
 <img width="527" alt="Image" src="https://github.com/user-attachments/assets/34a4623a-76a0-4432-83e5-09eb0385cf91" />
 ## RESULT:
