@@ -1,33 +1,56 @@
-# Ex.No:5(E) HAS-A RELATIONSHIP
+# Ex.No:5(D) IS-A RELATIONSHIP AND HAS-A RELATIONSHIP
 ## AIM:
-To implement a  Java Program to Find the Largest or Max Number in Array using has - a relationship.
+   To Create a java program to find factorial of number using class and object concepts and apply the has-a relationship.
+ 
 ## ALGORITHM :
-1.	Start the program.
-2.	Create a class ArrayData:
-a.	Declare an integer array and a variable for size.
-b.	Create a method to read array elements from the user.
-3.	Create another class ArrayOperation:
-a.	Create a method findMax() that accepts an ArrayData object.
-b.	Loop through the array and find the largest element.
-4.	In the main() method of a class Main:
-a.	Create an object of ArrayData and read the input.
-b.	Create an object of ArrayOperation and call findMax() by passing the ArrayData object.
-5.	Display the largest number.
-6.	End the program.
-
-
+1.	Start the Program
+2.	Define class `A`:
+-	a) Declare integer `n` and initialize `fact` to 1
+-	b) Define method `factorial(int n)`:
+-	i) Set `this.n = n`
+-	ii) Use a loop from 1 to `n` to calculate `fact = fact * i`
+-	iii) Print "Factorial is:" followed by `fact`
+3.	In `main` class `main` method:
+-	a) Use `Scanner` to read integer `n`
+-	b) Create an `A` object and call `factorial(n)`
+4.	End
 
 ## PROGRAM:
  ```
 /*
-Program to implement a HAS-A RelationShip
-Developed by: 
-RegisterNumber:  
+Program to implement a IS-A RELATIONSHIP AND HAS-A RELATIONSHIP using Java
+Developed by: Sakthi Navaneetha
+RegisterNumber: 212222040138
 */
 ```
 
 ## Sourcecode.java:
-
+```
+import java.util.Scanner;
+class fun{
+    public static boolean isPal(String s)
+    {   
+        if(s.length() == 0 || s.length() == 1)
+            return true; 
+        if(s.charAt(0) == s.charAt(s.length()-1))
+        
+        return isPal(s.substring(1, s.length()-1));
+        return false;
+    }
+}
+public class ArrayProgram {
+  public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String string = scanner.nextLine();
+        fun obj=new fun();
+        if(obj.isPal(string))
+            System.out.println(string + " is a palindrome");
+        else
+            System.out.println(string + " is not a palindrome");
+    
+  }
+}
+```
 
 
 
@@ -36,8 +59,7 @@ RegisterNumber:
 
 ## OUTPUT:
 
-
+![Image](https://github.com/user-attachments/assets/9d66d86b-ed86-468e-bb2f-e029a7b0945e)
 
 ## RESULT:
-Thus the java program to Find the Largest or Max Number in Array using has - a relationship was executed successfully. 
-
+Thus the java program to find factorial of number using class and object concepts and apply the has-a relationship was executed successfully.
