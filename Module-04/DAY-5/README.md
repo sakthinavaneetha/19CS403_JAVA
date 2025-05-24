@@ -21,7 +21,6 @@ To write a parameterized constructor in the Employee class that initializes name
 9.	Print the values of empName and empDesg.
 10.	End the program
 
-
 ## PROGRAM:
  ```
 /*
